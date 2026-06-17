@@ -2,14 +2,15 @@
   <header class="app-header">
     <RouterLink class="brand" to="/">
       <span class="brand-mark">剪</span>
+      <span class="ai-badge">AI</span>
       <span>
         <strong>福建剪纸文化</strong>
-        <small>Paper Cutting Heritage</small>
+        <small>AI × Paper Cutting Heritage</small>
       </span>
     </RouterLink>
     <button class="menu-btn" type="button" @click="open = !open">菜单</button>
     <nav :class="{ open }">
-      <RouterLink v-for="item in navItems" :key="item.path" :to="item.path" @click="open = false">
+      <RouterLink v-for="item in navItems" :key="item.path" :to="item.path" :class="{ highlight: item.highlight }" @click="open = false">
         {{ item.label }}
       </RouterLink>
     </nav>
@@ -24,6 +25,8 @@ const navItems = [
   { path: '/', label: '首页' },
   { path: '/history', label: '文化溯源' },
   { path: '/schools', label: '四大流派' },
+  { path: '/ai-experience', label: 'AI 体验', highlight: true },
+  { path: '/digital-twin', label: '数字孪生' },
   { path: '/gallery', label: '作品赏析' },
   { path: '/masters', label: '传承人物' },
   { path: '/news', label: '资讯动态' },
@@ -129,6 +132,35 @@ nav a.router-link-active::after {
   border-radius: 999px;
   background: var(--color-cinnabar);
   padding: 8px 16px;
+}
+
+.ai-badge {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  color: var(--color-gold);
+  border: 2px solid var(--color-gold);
+  border-radius: 6px;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 800;
+  font-family: var(--font-title);
+  margin-left: -6px;
+  margin-top: -24px;
+  background: var(--color-paper);
+}
+
+nav a.highlight {
+  color: var(--color-gold);
+  background: rgba(212, 175, 55, 0.1);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+nav a.highlight.router-link-active,
+nav a.highlight:hover {
+  color: var(--color-gold);
+  background: rgba(212, 175, 55, 0.18);
 }
 
 @media (max-width: 980px) {

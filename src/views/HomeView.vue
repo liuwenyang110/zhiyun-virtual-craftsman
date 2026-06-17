@@ -10,6 +10,7 @@
         <div class="hero-actions">
           <RouterLink class="btn primary" to="/schools">探访四大流派</RouterLink>
           <RouterLink class="btn ghost" to="/history">了解文化溯源</RouterLink>
+          <RouterLink class="btn ai-btn" to="/ai-experience">🤖 AI 智能体验</RouterLink>
         </div>
       </div>
       <div class="hero-art card">
@@ -32,6 +33,15 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+      <SectionTitle title="AI 赋能非遗" seal="AI" kicker="Intelligence × Heritage" desc="人工智能为千年剪纸注入新生命，让文化传承更智能、更触手可及。" />
+      <div class="grid three">
+        <AIFeatureCard v-for="f in aiFeatures" :key="f.title" :icon="f.icon" :title="f.title" :desc="f.desc" :link="f.link" />
+      </div>
+    </div>
+  </section>
+
   <section class="section alt">
     <div class="container grid three honor-grid">
       <div class="honor card card-pad">
@@ -45,6 +55,18 @@
       <div class="honor card card-pad">
         <strong>UNESCO</strong>
         <span>中国剪纸人类非遗代表作</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="ai-cta card red-pattern">
+        <div>
+          <h2>🤖 立即体验 AI 剪纸助手</h2>
+          <p>智能对话了解剪纸文化 · AI 生成剪纸图案 · 识别作品风格流派</p>
+        </div>
+        <RouterLink class="btn ghost-cta" to="/ai-experience">开始体验 →</RouterLink>
       </div>
     </div>
   </section>
@@ -69,8 +91,10 @@ import WindowFlower from '../components/WindowFlower.vue'
 import CornerOrnament from '../components/CornerOrnament.vue'
 import SectionTitle from '../components/SectionTitle.vue'
 import SchoolCard from '../components/SchoolCard.vue'
+import AIFeatureCard from '../components/AIFeatureCard.vue'
 import { schools } from '../data/schools'
 import { news } from '../data/news'
+import { aiFeatures } from '../data/ai-chat'
 </script>
 
 <style scoped>
@@ -179,6 +203,54 @@ import { news } from '../data/news'
 
   .hero-art {
     min-height: 360px;
+  }
+}
+
+.ai-btn {
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-gold), #c9a961) !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 28px rgba(212, 175, 55, 0.3);
+}
+
+.ai-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 40px;
+}
+
+.ai-cta h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-family: var(--font-title);
+  font-size: 28px;
+}
+
+.ai-cta p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.ghost-cta {
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  font-size: 17px;
+  padding: 0 28px;
+  min-height: 48px;
+}
+
+.ghost-cta:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+}
+
+@media (max-width: 600px) {
+  .ai-cta {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
   }
 }
 </style>
