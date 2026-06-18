@@ -20,7 +20,7 @@
             </button>
           </div>
           <div class="chat-input-row">
-            <input v-model="input" class="chat-input" placeholder="输入您的问题，了解福建剪纸文化…" @keydown.enter="send" />
+            <input v-model="input" class="chat-input" placeholder="输入您的问题，了解剪纸文化…" @keydown.enter="send" />
             <button class="btn primary" @click="send" :disabled="waiting">发送</button>
           </div>
         </div>

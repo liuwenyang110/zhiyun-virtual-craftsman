@@ -1,11 +1,11 @@
 <template>
   <header class="app-header">
     <RouterLink class="brand" to="/">
-      <span class="brand-mark">剪</span>
+      <span class="brand-mark">纸</span>
       <span class="ai-badge">AI</span>
       <span>
-        <strong>福建剪纸文化</strong>
-        <small>AI × Paper Cutting Heritage</small>
+        <strong>纸韵-虚拟匠人</strong>
+        <small>AI × Virtual Craftsman</small>
       </span>
     </RouterLink>
     <button class="menu-btn" type="button" @click="open = !open">菜单</button>

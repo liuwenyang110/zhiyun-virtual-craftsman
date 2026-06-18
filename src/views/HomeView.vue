@@ -213,6 +213,10 @@ import { aiFeatures } from '../data/ai-chat'
   box-shadow: 0 10px 28px rgba(212, 175, 55, 0.3);
 }
 
+.ai-btn:hover {
+  transform: none;
+}
+
 .ai-cta {
   display: flex;
   align-items: center;

@@ -2,7 +2,7 @@
   <footer class="app-footer red-pattern paper-edge">
     <div class="container footer-grid">
       <div>
-        <h2>福建剪纸文化</h2>
+        <h2>纸韵-虚拟匠人</h2>
         <p>以一纸一剪，见山海闽韵；以非遗传承，续千年乡愁。</p>
       </div>
       <div>
@@ -15,7 +15,7 @@
         <p>基于大语言模型与知识图谱技术，为剪纸非遗提供智能问答、图案生成、作品识别与数字孪生服务。</p>
       </div>
     </div>
-    <p class=”copyright”>© 2026 福建剪纸文化 · AI 赋能非遗 · 数字传承千年</p>
+    <p class=”copyright”>© 2026 纸韵-虚拟匠人 · AI 赋能非遗 · 数字传承千年</p>
   </footer>
 </template>
 

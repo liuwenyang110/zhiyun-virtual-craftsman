@@ -1,10 +1,10 @@
 <template>
   <section class="section">
     <div class="container">
-      <SectionTitle title="联系我们" seal="联" desc="欢迎共同参与福建剪纸文化的 AI 赋能、展览策划、数字传播与文创合作。" />
+      <SectionTitle title="联系我们" seal="联" desc="欢迎共同参与剪纸文化的 AI 赋能、展览策划、数字传播与文创合作。" />
       <div class="grid two contact-grid">
         <div class="card card-pad info-card">
-          <h3>福建剪纸文化展示中心</h3>
+          <h3>纸韵-虚拟匠人展示中心</h3>
           <p><strong>地址：</strong>福建省非遗数字展示云端展馆</p>
           <p><strong>邮箱：</strong>heritage@example.com</p>
           <p><strong>合作：</strong>AI 模型训练合作 / 数字孪生建设 / 知识图谱共建 / 展览策划 / 研学课程</p>

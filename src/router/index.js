@@ -32,7 +32,7 @@ const router = createRouter({
 })
 
 router.afterEach((to) => {
-  document.title = `${to.meta.title} | 福建剪纸文化`
+  document.title = `${to.meta.title} | 纸韵-虚拟匠人`
 })
 
 export default router
